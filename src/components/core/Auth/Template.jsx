@@ -1,12 +1,13 @@
-import { FcGoogle } from "react-icons/fc"
-import { useSelector } from "react-redux"
+import { FcGoogle } from "react-icons/fc";
+import { useSelector } from "react-redux";
 
-import frameImg from "../../../assets/Images/frame.png"
-import LoginForm from "./LoginForm"
-import SignupForm from "./SignupForm"
+import frameImg from "../../../assets/Images/frame.png";
+import LoginForm from "./LoginForm";
+import SignupForm from "./SignupForm";
+import Banner from "../../../assets/Images/auth.mp4";
 
 function Template({ title, description1, description2, image, formType }) {
-  const { loading } = useSelector((state) => state.auth)
+  const { loading } = useSelector((state) => state.auth);
 
   return (
     <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
@@ -26,27 +27,43 @@ function Template({ title, description1, description2, image, formType }) {
             </p>
             {formType === "signup" ? <SignupForm /> : <LoginForm />}
           </div>
-          <div className="relative mx-auto w-11/12 max-w-[450px] md:mx-0">
+          <div className="relative mx-auto w-11/12 max-w-[600px] md:mx-0">
             <img
               src={frameImg}
               alt="Pattern"
+              width={600}
+              height={400}
+              loading="lazy"
+            />
+
+            <video
+              alt="Students"
               width={558}
               height={504}
               loading="lazy"
-            />
-            <img
+              className="absolute -top-4 right-4 z-10 rounded-2xl"
+              // className="shadow-[20px_20px_rgba(255,255,255)]"
+
+              muted
+              loop
+              autoPlay
+            >
+              <source src={Banner} type="video/mp4" />
+            </video>
+
+            {/* <img
               src={image}
               alt="Students"
               width={558}
               height={504}
               loading="lazy"
               className="absolute -top-4 right-4 z-10"
-            />
+            /> */}
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Template
+export default Template;
