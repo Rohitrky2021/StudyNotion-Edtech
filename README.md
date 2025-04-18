@@ -1,212 +1,130 @@
-# StudyFy HUB Online Education Platform (MERN App) [Website Link](https://StudyFy HUB-frontend.vercel.app/)
+# StudyFy HUB: Empowering Education with MERN  
+[Explore StudyFy HUB](https://studyfy-hub-frontend.vercel.app/)  
 
-![Main Page](images/mainpage.png)
+![Homepage Preview](assets/main-screenshot.png)  
 
-## Project Description
+## Introduction  
 
-StudyFy HUB is a fully functional ed-tech platform that enables users to create, consume,
-and rate educational content. The platform is built using the MERN stack, which includes
-ReactJS, NodeJS, MongoDB, and ExpressJS.
-StudyFy HUB aims to provide:
-* A seamless and interactive learning experience for students, making education
-more accessible and engaging.
-* A platform for instructors to showcase their expertise and connect with learners
-across the globe.
-In the following sections, we will cover the technical details of the platform, including:
-1. System architecture: The high-level overview of the platform's components and
-diagrams of the architecture.
-2. Front-end: The description of the front-end architecture, user interface design,
-features, and functionalities of the front-end, and frameworks, libraries, and tools
-used.
-3. Back-end: The description of the back-end architecture, features and functionalities of
-the back-end, frameworks, libraries, tools used, and data models and database schema.
-4. API Design: The description of the API design, list of API endpoints, their
-functionalities, and sample API requests and responses.
-5. Deployment: The description of the deployment process, hosting environment and
-infrastructure, and deployment scripts and configuration.
-6. Testing: The description of the testing process, types of testing, test frameworks and
-tools used.
-7. Future Enhancements: The list of potential future enhancements to the platform,
-explanation of how these enhancements would improve the platform, estimated
-timeline and priority for implementing these enhancements.
+**StudyFy HUB** is a robust e-learning platform built with the **MERN stack** (MongoDB, Express.js, React, Node.js). It connects learners with high-quality educational content and empowers instructors to share their expertise globally.  
 
-In summary, StudyFy HUB is a versatile and intuitive ed-tech platform that is designed to
-provide an immersive learning experience to students and a platform for instructors to
-showcase their expertise. In the following sections, we will delve into the technical details
-of the platform, which will provide a comprehensive understanding of the platform's
-features and functionalities.
+**Key Objectives**:  
+- Deliver an engaging, accessible learning experience for students.  
+- Provide instructors with tools to create and manage courses effectively.  
 
-## System Architecture
+This README dives into the platform’s architecture, features, and vision for the future.  
 
-The StudyFy HUB ed-tech platform consists of three main components: the front end, the
-back end, and the database. The platform follows a client-server architecture, with the
-front end serving as the client and the back end and database serving as the server.
+---
 
-### Front-end 
+## Contents  
+- [Architecture Overview](#architecture-overview)  
+- [Frontend Details](#frontend-details)  
+- [Backend Structure](#backend-structure)  
+- [API Blueprint](#api-blueprint)  
+- [Deployment Process](#deployment-process)  
+- [Testing Strategy](#testing-strategy)  
+- [Future Plans](#future-plans)  
 
-The front end of the platform is built using ReactJS, ReactJS allows for the creation of dynamic and responsive user
-interfaces, which are critical for providing an engaging learning experience to the students.
-The front end communicates with the back end using RESTful API calls
+---
 
-### Back-end 
+## Architecture Overview  
 
-The back end of the platform is built using NodeJS and ExpressJS,. The back end
-provides APIs for the front end to consume, which include functionalities such as user
-authentication, course creation, and course consumption. The back end also handles the
-logic for processing and storing the course content and user data.
+StudyFy HUB follows a **client-server architecture**, with three core components:  
 
+- **Frontend**: A **React.js**-powered interface for seamless user interaction.  
+- **Backend**: A **Node.js** and **Express.js** server handling logic and API requests.  
+- **Database**: **MongoDB** for flexible, scalable storage of course and user data.  
 
-### Database
+### Architecture Diagram  
+![System Diagram](assets/system-diagram.png)  
 
-The database for the platform is built using MongoDB, which is a NoSQL database that
-provides a flexible and scalable data storage solution. MongoDB allows for the storage of
-unstructured and semi-structured data. The database stores the course content, user data, and other
-relevant information related to the platform.
+---
 
+## Frontend Details  
 
-### Architecture Diagram
+The frontend of StudyFy HUB is crafted with **React.js** for dynamic, responsive UI. **Tailwind CSS** ensures a sleek, modern design, and **Redux** manages application state for smooth performance.  
 
-Here is a high-level diagram that illustrates the architecture of the StudyFy HUB ed-tech
-platform:
+### Pages & Features  
 
-![Architecture](images/architecture.png)
+#### For Students:  
+- **Home**: Welcomes users with an overview and links to courses.  
+- **Courses**: Lists all courses with descriptions, ratings, and filters.  
+- **Wishlist**: Saves courses for later consideration.  
+- **Checkout**: Handles secure course purchases.  
+- **Course View**: Displays videos, quizzes, and materials for enrolled courses.  
+- **Profile**: Manages user details like name and email.  
 
-## Front End
+#### For Instructors:  
+- **Dashboard**: Tracks course performance and feedback.  
+- **Analytics**: Offers insights into views, enrollments, and metrics.  
+- **Course Tools**: Supports creating, editing, and deleting courses.  
+- **Profile Editor**: Updates instructor account information.  
 
-The front end of StudyFy HUB has all the necessary pages that an ed-tech platform should
-have. Some of these pages are:
+#### Admin (Future Scope):  
+- **Platform Dashboard**: Monitors users, courses, and revenue.  
+- **User Oversight**: Manages student and instructor accounts.  
+- **Content Control**: Reviews and approves course content.  
 
-### For Students:
-* Homepage: This page will have a brief introduction to the platform, as well as links
-to the course list and user details.
-* Course List: This page will have a list of all the courses available on the platform,
-along with their descriptions and ratings.
-* Wishlist: This page will display all the courses that a student has added to their
-wishlist.
-* Cart Checkout: This page will allow the user to complete the course purchase.
-* Course Content: This page will have the course content for a particular course,
-including videos, and other related material.
-* User Details: This page will have details about the student's account, including
-their name, email, and other relevant information.
-* User Edit Details: This page will allow the student to edit their account details.
+### Frontend Tech  
+- **React.js**: For building interactive UI components.  
+- **Tailwind CSS**: For responsive styling.  
+- **Redux**: For state management.  
+- **React Router**: For navigation.  
 
+---
 
-### For Instructors:
-* Dashboard: This page will have an overview of the instructor's courses, as well as
-the ratings and feedback for each course.
-* Insights: This page will have detailed insights into the instructor's courses,
-including the number of views, clicks, and other relevant metrics.
-* Course Management Pages: These pages will allow the instructor to create, update,
-and delete courses, as well as manage the course content and pricing.
-* View and Edit Profile Details: These pages will allow the instructor to view and edit
-their account details.
-PAGE 3
-For Admin (this is for future scope):
-* Dashboard: This page will have an overview of the platform's courses, instructors,
-and students.
-* Insights: This page will have detailed insights into the platform's metrics, including
-the number of registered users, courses, and revenue.
-* Instructor Management: This page will allow the admin to manage the platform's
-instructors, including their account details, courses, and ratings.
-* Other Relevant Pages: The admin will also have access to other relevant pages, such
-as user management and course management pages.
+## Backend Structure  
 
-To build the front end, we use frameworks and libraries such as ReactJS, We also use CSS and Tailwind, which are
-styling frameworks that help make the user interface look good and responsive.
-To manage the state of the application, we use Redux, which is a popular state management
-library for React. 
+The backend is a **monolithic** system built with **Node.js** and **Express.js**, paired with **MongoDB** for data storage. It integrates **Cloudinary** for media management and supports secure, scalable operations.  
 
-## Back End
+### Key Features  
+- **Authentication**: JWT-based login, OTP verification, and password recovery.  
+- **Course Management**: APIs for course creation, updates, and deletion.  
+- **Payments**: **Razorpay** integration for secure transactions.  
+- **Content**: Markdown support for rich course materials.  
+- **Media**: Cloudinary for storing images, videos, and documents.  
 
-Description of the Back-end Architecture: 
-StudyFy HUB uses a monolithic architecture, with the backend built using Node.js and
-Express.js, and MongoDB as the primary database. 
+### Backend Tech  
+- **Node.js**: Server runtime.  
+- **Express.js**: API framework.  
+- **MongoDB**: NoSQL database.  
+- **Mongoose**: MongoDB object modeling.  
+- **JWT & Bcrypt**: For secure authentication.  
+- **Cloudinary**: For media storage.  
 
-Features and Functionalities of the Back-end: 
-The back end of StudyFy HUB provides a range of features and functionalities, including:
-1. User authentication and authorization: Students and instructors can sign up and log in
-to the platform using their email addresses and password. The platform also supports
-OTP (One-Time Password) verification and forgot password functionality for added
-security.
-1. Course management: Instructors can create, read, update, and delete courses, as well 
-as manage course content and media. Students can view and rate courses.
-1. Payment Integration: Students will purchase and enrol on courses by completing the
-checkout flow that is followed by Razorpay integration for payment handling.
-1. Cloud-based media management: StudyFy HUB uses Cloudinary, a cloud-based media
-management service, to store and manage all media content, including images, videos,
-and documents.
-1. Markdown formatting: Course content in document format is stored in Markdown
-format, which allows for easier display and rendering on the front end.
+### Data Schema  
+- **Student**: Name, email, password, enrolled courses.  
+- **Instructor**: Name, email, password, published courses.  
+- **Course**: Title, description, instructor, content, ratings.  
 
-Frameworks, Libraries, and Tools used: 
-The back end of StudyFy HUB uses a range of frameworks, libraries, and tools to ensure its
-functionality and performance, including:
-1. Node.js: Node.js is used as the primary framework for the back end.
-2. MongoDB: MongoDB is used as the primary database, providing a flexible and scalable
-data storage solution.
-3. Express.js: Express.js is used as a web application framework, providing a range of
-features and tools for building web applications.
-4. JWT: JWT (JSON Web Tokens) are used for authentication and authorization,
-providing a secure and reliable way to manage user credentials.
-5. Bcrypt: Bcrypt is used for password hashing, adding an extra layer of security to user
-data.
-6. Mongoose: Mongoose is used as an Object Data Modeling (ODM) library, providing a
-way to interact with MongoDB using JavaScript
+![Schema Diagram](assets/database-schema.png)  
 
-### Data Models and Database Schema: 
-The back end of StudyFy HUB uses a range of data models and database schemas to
-manage data, including:
-1. Student schema: Includes fields such as name, email, password, and course details
-for each student.
-2. Instructor schema: Includes fields such as name, email, password, and course
-details for each instructor.
-3. Course schema: Includes fields such as course name, description, instructor details,
-and media content.
+---
 
-Overall, the back-end of StudyFy HUB is designed to provide a robust and scalable solution
-for an ed-tech platform, with a focus on security, reliability, and ease of use. By using the
-right frameworks, libraries, and tools, we can ensure that the platform functions smoothly
-and provides an optimal user experience for all its users.
+## API Blueprint  
 
-![Database Schema](images/schema.png)
+StudyFy HUB’s API adheres to **REST** principles, using **JSON** for data exchange and standard HTTP methods.  
 
-## API Design
+### Key Endpoints  
+- `POST /api/auth/signup`: Registers a new user.  
+- `POST /api/auth/login`: Authenticates and returns a JWT.  
+- `POST /api/auth/verify-otp`: Validates OTP.  
+- `GET /api/courses`: Lists all courses.  
+- `GET /api/courses/:id`: Retrieves a specific course.  
+- `POST /api/courses`: Creates a new course.  
+- `PUT /api/courses/:id`: Updates a course.  
+- `DELETE /api/courses/:id`: Deletes a course.  
+- `POST /api/courses/:id/rate`: Rates a course.  
 
-The StudyFy HUB platform's API is designed following the REST architectural style. The
-API is implemented using Node.js and Express.js. It uses JSON for data exchange and
-follows standard HTTP request methods such as GET, POST, PUT, and DELETE.
-Sample list of API endpoints and their functionalities: 
-1. /api/auth/signup (POST) - Create a new user (student or instructor) account.
-2. /api/auth/login (POST) – Log in using existing credentials and generate a JWT
-token.
-3. /api/auth/verify-otp (POST) - Verify the OTP sent to the user's registered email.
-4. /api/auth/forgot-password (POST) - Send an email with a password reset link to
-the registered email.
-5. /api/courses (GET) - Get a list of all available courses.
-6. /api/courses/:id (GET) - Get details of a specific course by ID.
-7. /api/courses (POST) - Create a new course.
-8. /api/courses/:id (PUT) - Update an existing course by ID.
-9. /api/courses/:id (DELETE) - Delete a course by ID.
-10. /api/courses/:id/rate (POST) - Add a rating (out of 5) to a course.
-Sample API requests and responses: 
-1. GET /api/courses: Get all courses
-   * Response: A list of all courses in the database
-2. GET /api/courses/:id: Get a single course by ID
-   * Response: The course with the specified ID
-3. POST /api/courses: Create a new course
-   * Request: The course details in the request body
-   * Response: The newly created course
-4. PUT /api/courses/:id: Update an existing course by ID
-   * Request: The updated course details in the request body
-   * Response: The updated course
-5. DELETE /api/courses/:id: Delete a course by ID
-   * Response: A success message indicating that the course has been deleted.
-
-In conclusion, the REST API design for the StudyFy HUB ed-tech platform is a crucial part
-of the project. The API endpoints and their functionalities are designed to ensure seamless
-communication between the front-end and back-end of the application. By following
-RESTful principles, the API will be scalable, maintainable, and reliable. The sample API
-requests and responses provided above illustrate how each endpoint will function and
-what kind of data it will accept or return. With this API design, StudyFy HUB will be able to
-provide a smooth user experience while ensuring security and stability.
-
+### Example API Call  
+**GET /api/courses**  
+- **Response**:  
+```json
+[
+  {
+    "id": "abc123",
+    "title": "Web Development 101",
+    "description": "Learn HTML, CSS, JS",
+    "rating": 4.7
+  },
+  ...
+]
